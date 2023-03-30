@@ -2,7 +2,7 @@
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
-name: 'san_francisco_bikeshare'
+name: 'olist_ecommerce'
 version: '1.0.0'
 config-version: 2
 
@@ -32,11 +32,19 @@ clean-targets:         # directories to be removed by `dbt clean`
 # as tables. These settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
 models:
-  san_francisco_bikeshare:
-    # Applies to all files under models/example/
+  olist_ecommerce:
+    # Applies to all files under models
     staging:
-      +materialized: view 
+      +materialized: view
+      +schema: staging
+      +tags: staging
     marts:
       core:
-      +materialized: table
+        +materialized: table
+        +schema: core
+        +tags: core
+      intermediate:
+        +materialize: view
+        +schema: intermediate
+        +tags: int
       

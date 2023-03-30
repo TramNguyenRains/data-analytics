@@ -1,0 +1,8 @@
+version: 2
+
+models:
+  - name: a_olist_master
+    columns: 
+      - name: order_id
+        tests:
+          - not_null

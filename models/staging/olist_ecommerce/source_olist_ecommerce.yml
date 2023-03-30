@@ -1,0 +1,50 @@
+version: 2
+
+sources:
+  - name: olist_ecommerce
+    database: raw-data-380014
+    schema: olist_ecommerce
+    tables:
+      - name: olist_customers
+        columns:
+          - name: customer_id
+            tests:
+              - unique
+              - not_null
+      - name: olist_geolocation
+      - name: olist_order_items
+        columns:
+          - name: order_id
+            tests:
+              - not_null
+      - name: olist_order_payments
+        columns:
+          - name: order_id
+            tests:
+              - not_null
+      - name: olist_orders
+        columns:
+          - name: order_id
+            tests:
+              - unique
+              - not_null
+      - name: olist_products
+        columns:
+          - name: product_id
+            tests:
+              - unique
+              - not_null
+      - name: olist_sellers
+        columns:
+          - name: seller_id
+            tests:
+              - unique
+              - not_null
+      - name: product_category
+
+
+            
+            
+        
+
+
