@@ -41,10 +41,8 @@ models:
     marts:
       core:
         +materialized: table
-        +schema: core
         +tags: core
       intermediate:
         +materialize: view
-        +schema: intermediate
         +tags: int
       
