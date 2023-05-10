@@ -11,11 +11,11 @@ select_record AS(
         order_id,
         customer_id,
         order_status,
-        FORMAT_DATE('%Y-%m-%d',order_purchase_timestamp) as purchase_date,
-        FORMAT_DATE('%Y-%m-%d',order_approved_at) as approved_date,
-        FORMAT_DATE('%Y-%m-%d',order_delivered_carrier_date) as delivered_carrier_date,
-        FORMAT_DATE('%Y-%m-%d',order_delivered_customer_date) as delivered_customer_date,
-        FORMAT_DATE('%Y-%m-%d',order_estimated_delivery_date) as estimated_delivery_date
+        order_purchase_timestamp as purchase_date,
+        order_approved_at as approved_date,
+        order_delivered_carrier_date as delivered_carrier_date,
+        order_delivered_customer_date as delivered_customer_date,
+        order_estimated_delivery_date as estimated_delivery_date
     FROM refine_format
 
 ),

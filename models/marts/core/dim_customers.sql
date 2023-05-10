@@ -1,6 +1,7 @@
 WITH dim_customers AS(
     SELECT 
     customer_id,
+    customer_unique_id,
     customer_zip_code_prefix,
     geolocation_lat as customer_geo_lat,
     geolocation_lng as customer_geo_lng,

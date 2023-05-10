@@ -3,6 +3,7 @@ WITH olist_master AS(
         /*orders fields*/
         orders.order_id,
         orders.customer_id,
+        customer_unique_id,
         sellers.seller_id,
         order_status,
         purchase_date,
