@@ -4,7 +4,7 @@ WITH refine_format AS(
     SELECT 
         *,
         {{date_trunc('year','order_purchase_timestamp')}} as year_order
-    FROM {{ source('olist_ecommerce', 'olist_orders') }}
+    FROM {{ source('olist_ecommerce', 'olist_orders_dataset') }}
 ),
 select_record AS(
     SELECT 

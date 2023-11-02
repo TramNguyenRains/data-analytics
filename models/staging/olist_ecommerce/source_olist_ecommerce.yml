@@ -2,45 +2,45 @@ version: 2
 
 sources:
   - name: olist_ecommerce
-    database: raw-data-380014
-    schema: olist_ecommerce
+    database: analytics-380014
+    schema: dbt_tramnguyenrains
     tables:
-      - name: olist_customers
+      - name: olist_customers_dataset
         columns:
           - name: customer_id
             tests:
               - unique
               - not_null
-      - name: olist_geolocation
-      - name: olist_order_items
+      - name: olist_geolocation_dataset
+      - name: olist_order_items_dataset
         columns:
           - name: order_id
             tests:
               - not_null
-      - name: olist_order_payments
+      - name: olist_order_payments_dataset
         columns:
           - name: order_id
             tests:
               - not_null
-      - name: olist_orders
+      - name: olist_orders_dataset
         columns:
           - name: order_id
             tests:
               - unique
               - not_null
-      - name: olist_products
+      - name: olist_products_dataset
         columns:
           - name: product_id
             tests:
               - unique
               - not_null
-      - name: olist_sellers
+      - name: olist_sellers_dataset
         columns:
           - name: seller_id
             tests:
               - unique
               - not_null
-      - name: product_category
+      - name: product_category_name_translation
 
 
             

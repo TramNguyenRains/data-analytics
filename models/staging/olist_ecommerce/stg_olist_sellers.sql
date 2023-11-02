@@ -1,7 +1,7 @@
 WITH refine_format AS(
     SELECT 
         *
-    FROM {{ source('olist_ecommerce', 'olist_sellers') }}
+    FROM {{ source('olist_ecommerce', 'olist_sellers_dataset') }}
 ),
 final AS(
     SELECT 

@@ -5,7 +5,7 @@ WITH refine_format AS(
         payment_type,
         payment_installments,
         ROUND(payment_value,2) as payment_value
-    FROM {{ source('olist_ecommerce', 'olist_order_payments') }}
+    FROM {{ source('olist_ecommerce', 'olist_order_payments_dataset') }}
 ),
 final AS(
     SELECT 
