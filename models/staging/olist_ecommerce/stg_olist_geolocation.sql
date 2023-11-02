@@ -6,7 +6,7 @@ WITH refine_format AS(
         MAX(geolocation_city) as geolocation_city,
         MIN(geolocation_state) as geolocation_state
 
-    FROM {{ source('olist_ecommerce', 'olist_geolocation') }}
+    FROM {{ source('olist_ecommerce', 'olist_geolocation_dataset') }}
     GROUP BY geolocation_zip_code_prefix
 ),
 final AS(
